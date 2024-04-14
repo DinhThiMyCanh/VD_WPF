@@ -1,0 +1,86 @@
+﻿<Window x:Class="VD_WPF.TabControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VD_WPF"
+        mc:Ignorable="d"
+        Title="TabControl" Height="600" Width="800">
+    <Grid>
+        <StackPanel>
+            <TabControl Background="Beige">
+                <TabItem Header="Home">
+                    <Image Source="Picture\hotel.jpg" Stretch="Fill"/>
+                </TabItem>
+                <TabItem Header="View"/>
+                <TabItem Header="Edit"/>
+                <TabItem Header="Thông tin SV">
+                    <Grid ShowGridLines="False" Height="550">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <!--Các nhãn thông báo-->
+                        <TextBlock Text="Họ và Tên" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBlock Text="Ngày sinh" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1"/>
+                        <TextBlock Text="Giới tính" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2"/>
+                        <TextBlock Text="Ngoại ngữ" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"/>
+                        <TextBlock Text="Quê quán" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4"/>
+                        <TextBlock Text="Danh sách môn học" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5"/>
+
+                        <TextBox x:Name="txtHoTen" FontSize="20" Grid.Column="2"  Grid.ColumnSpan="5"/>
+
+                        <DatePicker Name="dtpNgaySinh" FontSize="20" Grid.Column="2"  Grid.ColumnSpan="5" Grid.Row="1"/>
+
+                        <RadioButton x:Name="rdNam" Content="Nam" FontSize="20" Grid.Column="2"  Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center"/>
+                        <RadioButton x:Name="rdNu" Content="Nữ" FontSize="20" Grid.Column="4"  Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center"/>
+
+                        <CheckBox x:Name ="chkTiengAnh" Content="Tiếng Anh" FontSize="20" Grid.Column="2"  Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" />
+                        <CheckBox x:Name ="chkTiengTrung" Content="Tiếng Trung" FontSize="20" Grid.Column="4"  Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" />
+                        <CheckBox x:Name ="chkTiengNhat" Content="Tiếng Nhật" FontSize="20" Grid.Column="6"  Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center"/>
+
+                        <ComboBox x:Name ="cboQuequan" FontSize="20" Grid.Column="2"  Grid.ColumnSpan="5" Grid.Row="4">
+                            <ComboBoxItem Content="Bình Định"/>
+                            <ComboBoxItem Content="Phú Yên"/>
+                            <ComboBoxItem Content="Gia Lai"/>
+                        </ComboBox>
+
+                        <ListBox x:Name="lstDSMH" FontSize="20" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="5" Grid.RowSpan="3" SelectionMode="Extended">
+                            <ListBoxItem Content="Cấu trúc DL"/>
+                            <ListBoxItem Content="LT hướng đối tượng"/>
+                            <ListBoxItem Content="LT hệ thống nhúng"/>
+                            <ListBoxItem Content="LT game"/>
+                            <ListBoxItem Content="LT Web"/>
+                        </ListBox>
+
+                        <Button x:Name="btnDangKy" Content="Đăng ký" FontSize="20" Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="2"/>
+                        <Button x:Name="btnHuyBo" Content="Hủy bỏ" FontSize="20" Grid.Column="5" Grid.Row="10" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</Window>
